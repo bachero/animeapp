@@ -1,0 +1,130 @@
+  .Anime {
+    --gifShadow-size : var(--gridList-gap, 6px);
+    margin-bottom: .5em;
+    position: relative;
+  }
+  
+  .Anime-buttons {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
+  }
+  
+  .Anime-link {
+    color: rgba(230, 114, 114, 0.3);
+    display: block;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+  }
+  
+  .Anime h4 {
+    background: rgba(230, 114, 114, 0.3);
+    bottom: 0;
+    font-size: 12px;
+    color: rgb(44, 7, 7);
+    margin: 0;
+    position: absolute;
+  }
+  
+  .Anime img {
+    width: 30%;
+    object-fit: contain;
+    vertical-align: top;
+  }
+  
+  i {
+    font-size: 80px;
+  }
+  
+  .Anime {
+    margin-bottom: 0;
+  }
+  
+  .Anime, .Anime-link {
+    height: 100%;
+  }
+  .Anime-link img {
+    height: inherit;
+    object-fit: cover;
+  }
+  
+  .Anime:nth-child(5n + 1) img {
+    background-color: var(--brand-color_1);
+  }
+  .Anime:nth-child(5n + 2) img {
+    background-color: var(--brand-color_2);
+  }
+  .Anime:nth-child(5n + 3) img {
+    background-color: var(--brand-color_3);
+  }
+  .Anime:nth-child(5n + 4) img {
+    background-color: var(--brand-color_4);
+  }
+  .Anime:nth-child(5n + 5) img {
+    background-color: var(--brand-color_5);
+  }
+  
+  .Anime:hover:nth-child(5n + 1) {
+    box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_1);
+  }
+  .Anime:hover:nth-child(5n + 2) {
+    box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_2);
+  }
+  .Anime:hover:nth-child(5n + 3) {
+    box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_3);
+  }
+  .Anime:hover:nth-child(5n + 4) {
+    box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_4);
+  }
+  .Anime:hover:nth-child(5n + 5) {
+    box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_5);
+  }
+  
+  .Anime:hover:nth-child(5n + 1) h4 {
+      background-color: var(--brand-color_1);
+      color: var(--theme-body-bg);
+  }
+  .Anime:hover:nth-child(5n + 2) h4 {
+      background-color: var(--brand-color_2);
+      color: var(--theme-body-bg);
+  }
+  .Anime:hover:nth-child(5n + 3) h4 {
+      background-color: var(--brand-color_3);
+      color: white;
+  }
+  .Anime:hover:nth-child(5n + 4) h4 {
+      background-color: var(--brand-color_4);
+      color: white;
+  }
+  .Anime:hover:nth-child(5n + 5) h4 {
+      background-color: var(--brand-color_5);
+      color: var(--theme-body-bg);
+  }
+  
+  .Anime:nth-child(11n + 1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .Anime:nth-child(8n+1) {
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+  }
+  
+  .Anime:nth-child(10n + 3) {
+      grid-column: span 2;
+      grid-row: span 1;
+  }
+  
+  @media screen and (max-width: 45rem)
+  {
+    .Anime:nth-child(11n + 1),
+    .Anime:nth-child(8n+1),
+    .Anime:nth-child(10n + 3) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  
+  }
