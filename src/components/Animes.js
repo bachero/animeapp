@@ -3,7 +3,7 @@ import {Link} from 'wouter'
 import './Anime.css'
 import './ListOfAnime.css'
 
-export default function Anime({ title, mal_id, image_url, url}){
+function Anime({ title, mal_id, image_url, url}){
     return (
         <div className="Anime">
             <a href={`${url}`} className='Anime-link'>
@@ -12,6 +12,7 @@ export default function Anime({ title, mal_id, image_url, url}){
             </a>
         </div>
     ) 
-
     ///anime/${title}/mal_id/${mal_id}
 }
+
+export default React.memo(Anime)

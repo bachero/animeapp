@@ -4,7 +4,7 @@ import getAnimes from '../../services/getAnimes'
 import Spinner from '../../components/spinner/index'
 import {useAnimes} from '../../hooks/useAnimes'
 
-export default function SearchResults({ params }){
+function SearchResults({ params }){
     const { keyword } = params
     const { loading, animes } = useAnimes({ keyword })
 
@@ -15,3 +15,5 @@ export default function SearchResults({ params }){
         }
         </>
 }
+
+export default React.memo(SearchResults)

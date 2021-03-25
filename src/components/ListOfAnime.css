@@ -1,21 +1,18 @@
-:root {
-  --results-columns:6
-}
-
 .ListOfAnime {
-  column-count: var(--results-columns);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  min-height: 100vh;
-  column-gap: .1em;
-  display: inline-block;
-  padding-left: 5dp;
-  
+  align-items: center;
+  gap: 0 16px;
 }
 
-
 .Anime img{
-  min-width: 225px;
-  min-height: 314px;
+  min-width: 200px;
+  min-height: 300px;
+}
+
+.Anime{
+  margin-bottom: 10px;
+  margin-inline: 1px;
+  
 }

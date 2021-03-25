@@ -2,7 +2,7 @@ import React from 'react'
 import Anime from './Animes'
 import './ListOfAnime.css'
 
-export default function ListOfAnime ({animes}) {
+function ListOfAnime ({animes}) {
         console.log(animes)
         return <div className='ListOfAnime'>
         {
@@ -18,4 +18,6 @@ export default function ListOfAnime ({animes}) {
         }
         </div>
 }
+
+export default React.memo(ListOfAnime)
     
