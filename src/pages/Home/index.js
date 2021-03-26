@@ -6,13 +6,14 @@ import {useAnimes} from '../../hooks/useAnimes'
 import TopSearches from "../../components/TopSearches"
 import './home.css'
 import SearchForm from "../../components/SearchForm"
+import { Helmet } from 'react-helmet'
+
 const POPULAR_GIFS = ["Naruto", "One Piece", "Sailor Moon", "FLCL", "Attack of Taitans"]
 
 
 export default function Home(){  
     const [path, pushLocation] = useLocation()
     const { loading, animes } = useAnimes()
-
     const handleSubmit = ({keyword}) => {
         pushLocation(`/anime/${keyword}`)
 
@@ -20,6 +21,10 @@ export default function Home(){
 
     return (
         <div>
+            <Helmet>
+                <title>Home</title>
+                <meta name="description" context="Bienvenido a la Home de AnimeTV"></meta>
+            </Helmet>
             <SearchForm onSubmit={handleSubmit}/>
             <h3 className="App-title">Última Búsqueda</h3>
             <ListOfAnime animes={animes}/>

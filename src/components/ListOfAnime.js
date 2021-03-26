@@ -3,7 +3,6 @@ import Anime from './Animes'
 import './ListOfAnime.css'
 
 function ListOfAnime ({animes}) {
-        console.log(animes)
         return <div className='ListOfAnime'>
         {
             animes.map(({mal_id, title, image_url, url}) => 

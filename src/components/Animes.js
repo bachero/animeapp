@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'wouter'
 import './Anime.css'
 import './ListOfAnime.css'
 
