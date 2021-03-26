@@ -1,6 +1,5 @@
 import React from 'react'
 import ListOfAnime from '../../components/ListOfAnime'
-import getAnimes from '../../services/getAnimes'
 import Spinner from '../../components/spinner/index'
 import {useAnimes} from '../../hooks/useAnimes'
 import { Helmet } from 'react-helmet'

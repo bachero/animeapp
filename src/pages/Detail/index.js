@@ -1,6 +1,6 @@
-import React, {useContext} from 'react'
+/*import React, {useContext} from 'react'
 import AnimesContext from '../../context/AnimesContext'
-/*export default function Detail({ params }){
+export default function Detail({ params }){
     const {animes} = useContext(AnimesContext)
 
     const anime = animes.find(singleAnime =>

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Link, useLocation } from "wouter"
-import getAnimes from '../../services/getAnimes'
 import ListOfAnime from '../../components/ListOfAnime'
 import {useAnimes} from '../../hooks/useAnimes'
 import TopSearches from "../../components/TopSearches"

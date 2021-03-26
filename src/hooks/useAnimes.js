@@ -20,7 +20,7 @@ export function useAnimes({ keyword } = { keyword: null}){
             //guardar keyword en localstorage
             localStorage.setItem('lastKeyword', keyword)
         })
-    }, [keyword])
+    }, [keyword, setAnimes])
 
     return {loading, animes}
 
