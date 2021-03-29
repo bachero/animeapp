@@ -3,10 +3,10 @@ import ListOfAnime from '../../components/ListOfAnime'
 import Spinner from '../../components/spinner/index'
 import {useAnimes} from '../../hooks/useAnimes'
 import { Helmet } from 'react-helmet'
-
+import SearchForm from "../../components/SearchForm"
 function SearchResults({ params }){
-    const { keyword } = params
-    const { loading, animes } = useAnimes({ keyword })
+    const { keyword, rating = 'pg13' } = params
+    const { loading, animes } = useAnimes({ keyword, rating })
 
     return <>
         {loading
@@ -20,9 +20,12 @@ function SearchResults({ params }){
                 </>
             :   <>
                     <Helmet>
-                        <title>{keyword}</title>
+                        <title>{decodeURI(keyword)}</title>
                         <meta name="description" context={keyword}></meta>
                     </Helmet>
+                    <header className="o-header">
+                        <SearchForm initialKeyword={keyword} initialRating={rating}/>
+                    </header>
                     <ListOfAnime animes={animes}/>
                 </>
         }

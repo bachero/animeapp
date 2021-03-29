@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useLocation } from "wouter"
+import { Link } from "wouter"
 import ListOfAnime from '../../components/ListOfAnime'
 import {useAnimes} from '../../hooks/useAnimes'
 import TopSearches from "../../components/TopSearches"
@@ -11,12 +11,8 @@ const POPULAR_GIFS = ["Naruto", "One Piece", "Sailor Moon", "FLCL", "Attack of T
 
 
 export default function Home(){  
-    const [path, pushLocation] = useLocation()
     const { loading, animes } = useAnimes()
-    const handleSubmit = ({keyword}) => {
-        pushLocation(`/anime/${keyword}`)
-
-    }
+    
 
     return (
         <div>
@@ -24,7 +20,9 @@ export default function Home(){
                 <title>Home</title>
                 <meta name="description" context="Bienvenido a la Home de AnimeTV"></meta>
             </Helmet>
-            <SearchForm onSubmit={handleSubmit}/>
+            <header className="o-header">
+            <SearchForm/>
+            </header>
             <h3 className="App-title">Última Búsqueda</h3>
             <ListOfAnime animes={animes}/>
             <h3 className="App-title">Sugerencias</h3>

@@ -1,5 +1,5 @@
-export default function getAnimes({keyword = 'One piece'} = {}){
-  const apiURL = `https://api.jikan.moe/v3/search/anime?q=${keyword}`
+export default function getAnimes({keyword = 'One piece', rating} = {}){
+  const apiURL = `https://api.jikan.moe/v3/search/anime?q=${keyword}&rated=${rating}`
     return fetch(apiURL)
     .then(res => res.json())
     .then(response => {

@@ -28,7 +28,7 @@ function App() {
         />
         <Route
           component={SearchResults}
-          path="/anime/:keyword"/>
+          path="/anime/:keyword/:rating?"/>
         </AnimesContextProvider>
       </section>
       </Suspense>
